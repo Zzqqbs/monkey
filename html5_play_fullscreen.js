@@ -1,13 +1,14 @@
 // ==UserScript==
-// @name        AcFun 播放器全屏保持
-// @author      Zzqqbs
-// @version     0.2.1
-// @description AcFun 播放器自动播放下一集时，保持当前窗口全屏状态
-// @icon        https://cdn.aixifan.com/ico/favicon.ico
-// @include     /^https?:\/\/www.acfun.cn/bangumi/\w+(\d+_){2}\d+$/
-// @run-at      document-end
-// @grant       GM_setValue
-// @grant       GM_getValue
+// @name            AcFun 播放器全屏保持
+// @author          Zzqqbs
+// @version         0.2.2
+// @description     AcFun 播放器自动播放下一集时，保持当前窗口全屏状态
+// @icon            https://cdn.aixifan.com/ico/favicon.ico
+// @updateURL       https://github.com/Zzqqbs/monkey/raw/master/html5_play_fullscreen.js
+// @include         /^https?:\/\/www.acfun.cn/bangumi/\w+(\d+_){2}\d+$/
+// @run-at          document-idle
+// @grant           GM_setValue
+// @grant           GM_getValue
 // ==/UserScript==
 (function () {
     let loopTime = 20;
@@ -35,14 +36,16 @@
         }
     }
 
-    fullscreen_read();
-    setInterval(function () {
-        setTimeout(function () {
-            if (videoEle.currentTime <= loopTime) {
-                fullscreen_write();
-            } else if (videoEle.currentTime + loopTime >= videoEle.duration) {
-                fullscreen_read();
-            }
-        }, ~~(Math.random * 1000));
-    }, loopTime * 500);
+    setTimeout(function () {
+        fullscreen_read();
+        setInterval(function () {
+            setTimeout(function () {
+                if (videoEle.currentTime <= loopTime) {
+                    fullscreen_write();
+                } else if (videoEle.currentTime + loopTime >= videoEle.duration) {
+                    fullscreen_read();
+                }
+            }, ~~(Math.random * 1000));
+        }, loopTime * 500);
+    }, 5000);
 })();
