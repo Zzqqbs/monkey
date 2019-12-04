@@ -5,6 +5,7 @@
 // @description AcFun 播放器自动播放下一集时，保持当前窗口全屏状态
 // @icon        https://cdn.aixifan.com/ico/favicon.ico
 // @include     /^https?:\/\/www.acfun.cn/bangumi/\w+(\d+_){2}\d+$/
+// @run-at      document-end
 // @grant       GM_setValue
 // @grant       GM_getValue
 // ==/UserScript==
