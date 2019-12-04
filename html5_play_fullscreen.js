@@ -23,7 +23,7 @@ let fullscreen_screen = document.getElementsByClassName('fullscreen-screen')[0];
 let fullscreen_screen_tip = getTip(fullscreen_screen);
 
 function fullscreen_read() {
-    console.error('fullscreen_read:', fullscreen_web_tip.innerText, fullscreen_screen_tip.innerText);
+    console.info('fullscreen_read:', fullscreen_web_tip.innerText, fullscreen_screen_tip.innerText);
     GM_setValue('web', fullscreen_web_tip.innerText);
     GM_setValue('screen', fullscreen_screen_tip.innerText);
 }
