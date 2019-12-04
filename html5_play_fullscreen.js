@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        AcFun 播放器全屏保持
 // @author      Zzqqbs
-// @version     0.2
+// @version     0.2.1
 // @description AcFun 播放器自动播放下一集时，保持当前窗口全屏状态
 // @icon        https://cdn.aixifan.com/ico/favicon.ico
 // @include     /^https?:\/\/www.acfun.cn/bangumi/\w+(\d+_){2}\d+$/
