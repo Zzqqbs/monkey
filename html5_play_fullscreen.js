@@ -6,7 +6,6 @@
 // @icon            https://cdn.aixifan.com/ico/favicon.ico
 // @updateURL       https://github.com/Zzqqbs/monkey/raw/master/html5_play_fullscreen.js
 // @include         /^https?:\/\/www.acfun.cn/bangumi/\w+(\d+_){2}\d+$/
-// @run-at          document-idle
 // @grant           GM_setValue
 // @grant           GM_getValue
 // ==/UserScript==
